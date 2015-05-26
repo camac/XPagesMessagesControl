@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:button value="2 Global messages" id="button2">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:@ErrorMessage("Global Message 1");
+@ErrorMessage("Global Message 2");}]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	<xp:button value="2 Messages For Alice" id="button3">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:@ErrorMessage("Message for Alice 1","alice")
+@ErrorMessage("Message for Alice 2","alice")}]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	<xp:button value="2 Messages For Bob" id="button1">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:@ErrorMessage("Message for Bob 1","bob")
+@ErrorMessage("Message for Bob 2","bob")
+}]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	<xp:button value="2 Messages For Cam" id="button5">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:@ErrorMessage("Message for Cam 1","cam")
+@ErrorMessage("Message for Cam 2","cam")}]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+
+	<xp:button value="2 Messages for Alice, 2 For Bob" id="button4">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:@ErrorMessage("Message for Alice 1","alice")
+@ErrorMessage("Message for Alice 2","alice")
+@ErrorMessage("Message for Bob 1","bob")
+@ErrorMessage("Message for Bob 2","bob")}]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:inputText id="cam"></xp:inputText>
+	<xp:br></xp:br>
+	<xp:table>
+		<xp:tr>
+			<xp:td>
+				<xp:label id="label1" value="Messages (All)"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Messages (Global Only)" id="label2"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Messages Alice" id="label3"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Messages Bob" id="label4"></xp:label>
+			</xp:td>
+
+			<xp:td>
+				<xp:label id="label5">
+					<xp:this.value><![CDATA[Message for="cam"]]></xp:this.value>
+				</xp:label>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:messages id="messagesAll"></xp:messages>
+			</xp:td>
+			<xp:td>
+				<xp:messages id="messagesGlobal" globalOnly="true"></xp:messages>
+			</xp:td>
+			<xp:td>
+				<xp:messages id="alice"></xp:messages>
+
+			</xp:td>
+			<xp:td>
+				<xp:messages id="bob"></xp:messages>
+			</xp:td>
+
+			<xp:td>
+				<xp:message id="message1" for="cam"></xp:message>
+			</xp:td>
+
+		</xp:tr>
+	</xp:table>
+</xp:view>
