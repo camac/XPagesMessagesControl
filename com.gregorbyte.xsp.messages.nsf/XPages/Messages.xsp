@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:gb="http://www.gregorbyte.com">
 
 	<xp:button value="2 Global messages" id="button2">
 		<xp:eventHandler event="onclick" submit="true"
@@ -73,16 +74,17 @@
 				<xp:messages id="messagesGlobal" globalOnly="true"></xp:messages>
 			</xp:td>
 			<xp:td>
-				<xp:messages id="alice"></xp:messages>
+				
 
+				<gb:messages id="alice"></gb:messages>
 			</xp:td>
 			<xp:td>
-				<xp:messages id="bob"></xp:messages>
-			</xp:td>
+				
+			<gb:messages id="bob"></gb:messages></xp:td>
 
 			<xp:td>
-				<xp:message id="message1" for="cam"></xp:message>
-			</xp:td>
+				
+			<gb:messages id="messages1" for="cam"></gb:messages></xp:td>
 
 		</xp:tr>
 	</xp:table>
