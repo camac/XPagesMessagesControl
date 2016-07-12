@@ -11,10 +11,8 @@
 		<description>A Messages component which can show multiple messages
 			for a component</description>
 		<display-name>Messages</display-name>
-		<component-type>com.gregorbyte.xsp.Messages
-		</component-type>
-		<component-class>com.gregorbyte.xsp.component.Messages
-		</component-class>
+		<component-type>com.gregorbyte.xsp.Messages</component-type>
+		<component-class>com.gregorbyte.xsp.component.Messages</component-class>
 
 		<property>
 			<description>Control Id that Messages belong to</description>
@@ -47,7 +45,8 @@
 					xmlns:xp="http://www.ibm.com/xsp/core"&gt;&#xd;
 					&#xd;
 					&lt;xp:label
-					value="Error Messages" id="label1"&#xd;
+					value="Error
+					Messages" id="label1"&#xd;
 					style="background-color:rgb(128,255,128)"&gt;&lt;/xp:label&gt;&#xd;
 					&lt;/xp:view&gt;</render-markup>
 

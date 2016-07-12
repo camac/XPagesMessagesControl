@@ -1,4 +1,4 @@
-package com.gregorbyte.xsp.renderer;
+package com.gregorbyte.xsp.renderkit;
 
 import java.util.Collections;
 import java.util.Iterator;
